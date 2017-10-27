@@ -1,17 +1,20 @@
 const mongoose = require( 'mongoose' )
 
-const MODEL_NAME = 'User'
+const MODEL_NAME = 'Book';
 
 const _schema = {
-  name: {
+  title: {
     type: String,
     required: true
   },
-  type: {
+  author: {
     type: String,
     required: true
   },
-  email: String
+  pages: {
+    type: Number,
+    required: true
+  }
 }
 const schema = new mongoose.Schema(_schema)
 

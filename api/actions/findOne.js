@@ -4,7 +4,7 @@ module.exports = ( Model ) => ( req, res ) => {
   }
 
   return Model.findOne( query, (err, data) => {
-    if (err) return console.log('ERRO: ', err)
+    if (err) return res.status(400).json({})
 
     return res.json(data)
   })

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const dbURI = 'mongodb://localhost/pos-alfa-2017';
+//ALTERAR, POIS FIZ USANDO O DOCKER
+const dbURI = 'mongodb://192.168.99.100:32768/posalfa';
 
 mongoose.connect(dbURI);
 

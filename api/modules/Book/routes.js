@@ -11,17 +11,6 @@ router.get('/:id', (req, res, next) => {
   Controller.findOne( req, res )
 })
 
-router.get('/:id/populate', (req, res, next) => {
-  Controller.findOne( req, res )
-    .populate('teacher')
-    .populate('students')
-    .populate('books')
-})
-
-router.get('/search/params', (req, res, next) => {
-  Controller.search( req, res )
-})
-
 router.post('/', (req, res, next) => {
   Controller.create( req, res )
 })

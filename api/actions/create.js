@@ -1,9 +1,4 @@
-module.exports = ( Model ) => ( req, res ) => {
-  const body = req.body
-
-  return Model.create(body, (err, data) => {
-    if (err) return console.log('ERRO: ', err)
-
-    return res.json(data)
-  })
-}
+module.exports = ( Model ) => ( req, res ) =>
+  Model.create( req.body )
+  .then( ( data ) => res.json( data ) )
+  .catch( ( err ) => res.status(400).json({}) )
